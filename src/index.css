@@ -2,77 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --primary: oklch(0.75 0.18 75);
-  --primary-foreground: oklch(0.15 0 0);
-  --sidebar-primary: oklch(0.70 0.18 75);
-  --sidebar-primary-foreground: oklch(0.15 0 0);
-  --chart-1: oklch(0.65 0.15 75);
-  --chart-2: oklch(0.70 0.16 75);
-  --chart-3: oklch(0.75 0.17 75);
-  --chart-4: oklch(0.80 0.18 75);
-  --chart-5: oklch(0.85 0.19 75);
-  --radius: 0.5rem;
-  --background: oklch(0.12 0.01 0);
-  --foreground: oklch(0.95 0.02 75);
-  --card: oklch(0.16 0.01 0);
-  --card-foreground: oklch(0.95 0.02 75);
-  --popover: oklch(0.16 0.01 0);
-  --popover-foreground: oklch(0.95 0.02 75);
-  --secondary: oklch(0.25 0.05 75);
-  --secondary-foreground: oklch(0.95 0.02 75);
-  --muted: oklch(0.20 0.01 0);
-  --muted-foreground: oklch(0.65 0.03 75);
-  --accent: oklch(0.75 0.18 75);
-  --accent-foreground: oklch(0.15 0 0);
-  --destructive: oklch(0.60 0.20 30);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.30 0.05 75);
-  --input: oklch(0.20 0.01 0);
-  --ring: oklch(0.75 0.18 75);
-  --sidebar: oklch(0.16 0.01 0);
-  --sidebar-foreground: oklch(0.95 0.02 75);
-  --sidebar-accent: oklch(0.25 0.05 75);
-  --sidebar-accent-foreground: oklch(0.95 0.02 75);
-  --sidebar-border: oklch(0.30 0.05 75);
-  --sidebar-ring: oklch(0.75 0.18 75);
-}
-
-.dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+@layer base {
+  :root {
+    /* Black & Gold Theme - Institutional Style */
+    --background: 0 0% 7%;          /* Deep black background #121212 */
+    --foreground: 45 100% 85%;      /* Soft gold text #F5E6C8 */
+    
+    --card: 0 0% 10%;               /* Slightly lighter black for cards #1A1A1A */
+    --card-foreground: 45 100% 90%; /* Bright gold text on cards #FFF4D6 */
+    
+    --popover: 0 0% 10%;
+    --popover-foreground: 45 100% 90%;
+    
+    --primary: 45 100% 55%;         /* Rich gold #FFD700 */
+    --primary-foreground: 0 0% 10%; /* Dark text on gold buttons */
+    
+    --secondary: 0 0% 15%;          /* Dark gray #262626 */
+    --secondary-foreground: 45 80% 70%; /* Muted gold text */
+    
+    --muted: 0 0% 18%;              /* Muted background #2E2E2E */
+    --muted-foreground: 45 40% 60%; /* Dimmed gold #B8A076 */
+    
+    --accent: 45 100% 50%;          /* Vibrant gold accent #FFD000 */
+    --accent-foreground: 0 0% 10%;  /* Dark text on accent */
+    
+    --destructive: 0 84% 60%;       /* Red for warnings */
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 45 30% 25%;           /* Gold-tinted border #3D3826 */
+    --input: 0 0% 15%;              /* Dark input background */
+    --ring: 45 100% 55%;            /* Gold focus ring */
+    
+    --radius: 0.5rem;
+    
+    --chart-1: 45 100% 55%;         /* Gold */
+    --chart-2: 45 90% 45%;          /* Darker gold */
+    --chart-3: 43 80% 40%;          /* Deep gold */
+    --chart-4: 40 70% 35%;          /* Bronze */
+    --chart-5: 35 60% 30%;          /* Dark bronze */
+  }
 }
 
 @layer base {
