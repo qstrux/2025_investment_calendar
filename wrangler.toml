@@ -1,0 +1,9 @@
+name = "2025-investment-calendar"
+compatibility_date = "2024-11-08"
+pages_build_output_dir = "dist"
+
+[env.production]
+vars = { VITE_APP_TITLE = "2025 Investment Calendar" }
+
+[env.preview]
+vars = { VITE_APP_TITLE = "2025 Investment Calendar - Preview" }
